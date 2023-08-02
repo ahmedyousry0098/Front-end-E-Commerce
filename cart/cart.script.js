@@ -75,7 +75,6 @@ function initLayout(cartProducts) {
         quantity.setAttribute('type', 'number')
         quantity.setAttribute('value', productQuantity)
         quantity.setAttribute('type', 'number')
-        quantity.setAttribute('readonly', "true")
         let currentValue = quantity.value
         quantity.addEventListener('change', function (e) {
             if (e.target.value>currentValue){
