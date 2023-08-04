@@ -1,0 +1,90 @@
+/*start mobile media*/
+@media(max-width: 767px)
+{
+.header .overlayBlack{
+	padding: 6px 0;
+
+}
+
+.header .carousel .carousel-item{
+	margin-top: 10px;
+}
+.header .carousel  h2{
+	font-weight: normal; 
+	font-size: 20px;
+}
+.header .carousel .mainP{
+	line-height: 1.5;
+	margin-top: 30px;
+}
+.carousel-control i {
+    font-size: 35px;
+}
+.main-btn{
+	margin-top: 20px;
+}
+.about-me .info .bottuns{
+
+}
+.about-me .info .bottuns .main-btn{
+margin-top:25px;
+margin-bottom:15px;
+}
+.about-me .My-imag{
+
+}
+.skills{
+	padding-top:30px;
+}
+.footer .divP{
+max-width: 60%;
+}
+.footer .divul{
+
+max-width: 40%;
+}
+.myWorks ul li{
+	display: inline-block;
+	margin-right: 0;
+	padding:5px 3px;
+	border:2px solid #EEE;
+	cursor: pointer;
+	width: 45%;
+	float: left;
+	margin-bottom: 5px;
+	margin-right: 5%;
+}
+.myWorks ul li:last-of-type{
+	
+	margin-right: 0;
+}
+} 
+/*end mobile media*/
+/*small screen*/
+@media(min-width: 786px)and (max-width: 991px){
+
+}
+/*small screen*/
+/*medium screen*/
+@media(min-width: 992px)and(max-width: 1199px){
+
+}
+/*medium screen*/
+/*large screen*/
+@media(min-width: 1200px){
+ .header .carousel .carousel-item{
+	margin-top: 170px;
+}
+.header .carousel .carousel-item .first-p{
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.header .carousel .carousel-item h2{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.header .carousel .carousel-item .main-btn{
+	margin-top:30px;
+}
+}
+/*large screen*/

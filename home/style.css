@@ -1,0 +1,90 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.mt-12rem {
+  margin-top: 15rem !important;
+}
+.mt-66rem {
+  margin-top:66rem;
+}
+.color-black {
+  color: #000;
+  font-size: 2rem;
+  opacity: 1 !important;
+  justify-content: space-between !important;
+}
+.bg-body-custome {
+  background-color: #e3e6e6;
+}
+.max-width {
+  max-width: 97.5% !important;
+}
+.height-450 {
+  height: 450px !important;
+}
+.height-200 {
+  height: 200px !important;
+}
+.height-380{
+  height: 380px !important;
+}
+
+.ml--50 {
+  margin-left: -50px;
+}
+.mr--50 {
+  margin-right: -50px;
+}
+.height {
+  height: 70% !important;
+  object-fit: cover;
+}
+.height50{
+height: 50%;
+}
+.card-height-fixed {
+  height: 320px !important;
+}
+.mt-1750 {
+  margin-top: 1750px;
+}
+.mt-1950 {
+  margin-top: 1950px;
+}
+.mt-2500{
+  margin-top: 2700px;
+
+}
+.img-card-height-fixed{
+height: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1rem;
+}
+.img-card-height-fixed img{
+  max-height: 170px
+}
+.img-adjustment{
+    height: 100%;
+    width: auto;
+}
+.height-400{
+    height: 400px;
+}
+.small-card-fixed-height{
+    height: 300px;
+}
+#header-cards > div, #carouselExampleIndicators3 > div,  #carouselExampleIndicators2 > div{
+  cursor: pointer;
+}
+.bg-grey{
+  background-color: #37475A;
+}
+.bg-grey:hover{
+  background-color: #243953;
+}
+.bg-footer{
+  background-color: #232F3E;
+}

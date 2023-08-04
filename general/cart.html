@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portofolio</title>
+	<link rel="stylesheet"  href="css/bootstrap.min.css">
+	<link rel="stylesheet"  href="css/font-awesome.min.css">
+	<link rel="stylesheet"  href="css/main.css">
+	<style> * { padding: 0;
+	margin: 0;
+	}
+	.ProductImage,.ProductBody{
+		display: inline-block;
+	}
+.heading{
+	text-align: center;
+}
+.ProductImage img{
+	width: 50%;
+}
+.priceColor{
+	color: #a7a7a7
+}
+.GrandTotal{
+	font-weight: bold;
+	font-size: 26px;
+}
+
+	</style>
+</head>
+<body>
+	
+<div class="container">
+	<h1 class="heading">Your Cart [4 Items]</h1>
+	<table id="table" class="table">
+		<thead>
+		  <tr>
+			<th scope="col">Item</th>
+			<th scope="col">price</th>
+			<th scope="col">Quantity</th>
+			<th scope="col">Total</th>
+		  </tr>
+		</thead>
+		<tbody id="productTable">
+			
+		</tbody>
+	  </table>
+	  <div>
+		<div class="row">
+			<div class="col-md-9"></div>
+		<div class="col-md-3  Total">
+		<table class="table">
+			<tbody>
+			  <tr>
+			
+				<td>Subtotal</td>
+				<td id="Subtotal" class="priceColor"></td>
+			  </tr>
+			  <tr>
+				<td>Sales Tax</td>
+				<td  class="priceColor">$102.00</td>
+			  </tr>
+			  <tr>
+				<td>Grand Total</td>
+				<td  class="priceColor GrandTotal"> $1.121.98</td>
+			  </tr>
+			</tbody>
+		  </table>
+		</div>
+		</div>
+	  </div>
+
+</div>	
+	
+	
+	<!--start scripts files-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<!--end scripts files-->
+	<script>
+		var totalPriceOfAllProducts=0
+		// product array 
+		var products = [
+			{	"id":1,
+				"ProudctName":"Pi Pizza Oven",
+				"ProductPrice":469
+			},
+			{	
+				"id":2,
+				"ProudctName":"Roma",
+				"ProductPrice":122
+			},
+			{
+				"id":3,
+				"ProudctName":" Pizza Cairo",
+				"ProductPrice":63
+			}
+
+		]
+		
+		for (product of products) {
+		var productTable=document.getElementById("productTable") // get table body
+		var tr = document.createElement("tr") // creat tr
+		tr.innerHTML=	`
+							<tr>
+								<td>
+										<div class="ProductImage">
+											<img src="images/Product.jpg"> 
+										</div>
+										<div class="ProductBody">
+											<h3>${product.ProudctName}</h3>
+											<h3>Estimated Ship Date: June 6th</h3>
+											<h6>Fuel Source:Wood Only</h6>
+										</div>
+								</td>
+								<td class="priceColor" id="productPrice${product.id}" value = "${product.ProductPrice}" >${product.ProductPrice}</td>
+								<td><form>
+									<input type="number" id="productQuantit" customID="${product.id}" onchange="changeValueQuantiti(this)">
+								</form></td>
+								<td  class="priceColor"id="productTotalPrice${product.id}"></td>
+							</tr> 
+						` // put td in tr 
+		productTable.appendChild(tr) // put tr in table body
+		}
+
+
+		var Quantity= document.getElementById("productQuantit") 
+		
+		function changeValueQuantiti (inp){
+			var inpValue = inp.value
+			var customID= inp.getAttribute("customID")
+			var productPrice = document.getElementById("productPrice"+customID)
+			var productTotalPrice = document.getElementById("productTotalPrice"+customID)
+
+			var regExp = /^[0-9]{1,}$/
+			var res = regExp.test(inpValue)
+			if (inpValue>=0&&res==true){
+				
+			productTotalPrice.innerHTML= inpValue*productPrice.getAttribute("value")
+			
+			// totalPriceOfAllProducts+=parseInt(productPrice.innerHTML)
+			// document.getElementById("Subtotal").innerHTML=totalPriceOfAllProducts
+			
+			}else{
+				productTotalPrice.innerHTML= 0
+			}	
+		}
+		var inpNum = document.getElementById("productQuantit")
+		inpNum.addEventListener("keypress",function(e){
+			console.log(e.keyCode)
+			if(e.keyCode >47 && e.keyCode <58 || e.keyCode==45 || e.keyCode==43){
+				e.preventDefault()
+			}
+		})
+		
+		/////test
+
+
+
+		
+	</script>
+</body>
+</html>

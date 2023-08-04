@@ -1,0 +1,398 @@
+/*
+main color : #0187ff;
+*/
+
+body{
+
+}
+
+/*start header*/
+.header{
+	background-image: url("../images/back.jpg");
+	width: 100%;
+	height: 600px;
+	color: #FFF;
+}
+.header .overlayBlack{
+	padding: 30px 0;
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.header  h2{
+display: inline;
+}
+.header  span{
+	color: #0187ff;
+}
+.header  ul{
+	display: inline;
+	float: right;
+	padding: 8px 0;
+}
+.header  ul li{
+	display: inline-block;
+	margin-left: 20px;
+}
+.header  ul li a{
+	color: #FFF;
+	text-decoration: none;
+}
+.header  ul li a:hover{
+	color: #0187ff;
+}
+.header .carousel {
+	width: 100%;
+	text-align: center;
+	margin-top: 20%;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.header .carousel .carousel-item{
+
+}
+.header .carousel p{
+}
+.header .carousel h2{
+	text-transform: uppercase;
+}
+.header .carousel .mainP{
+	margin: auto;
+	width: 320px;
+	line-height: 2;
+	color: #a0a0a0;
+	margin-bottom: 20px;
+}
+.header .carousel .carousel-control {
+	color: #0187ff;
+}
+
+.carousel-control i{
+
+}
+
+.carousel-control-next,
+ .carousel-control-prev {
+
+    width: 5%;
+}
+/*end header*/
+/*start About me*/
+.about-me{
+	background: url("../images/back2.jpg") no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover; 
+	min-height: 600px;
+	width:100%;
+}
+.about-me .overlayWihte{
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+	height: 100%;
+	padding: 60px 0 5px 0;
+	padding-bottom: 40px;
+	min-height: 600px;
+}
+.about-me .info {
+	width: 55%; 
+	float: left; 
+	margin-right: 5%;
+}
+.about-me .span-h2{
+	text-align: center;
+}
+.about-me .span-h2 .who{
+	background-color: #0187ff;
+	color: #FFF;
+	padding: 5px 20px;
+	position: relative;
+}
+.about-me .span-h2 .who:after{
+	content: "";
+    position: absolute;
+	width: 20%;
+	height: 100%;
+	top: 0px;
+    right: -26px;
+    border-width: 14px;
+    border-style: solid;
+	border-color: #0187ff transparent #0187ff #0187ff;
+    display: block;
+    position: absolute;
+}
+.about-me .span-h2 .who:before{
+	content: "";
+    position: absolute;
+	width: 20%;
+	height: 100%;
+	top: 0px;
+    left: -26px;
+    border-width: 14px;
+    border-style: solid;
+	border-color: #0187ff #0187ff #0187ff transparent;
+    display: block;
+    position: absolute;
+}
+.about-me .span-h2 h2{
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+.about-me .span-h2 .aboutme {
+	border-bottom: 2px solid #19961c;
+}
+.about-me .span-h2 .aboutme h2{
+	margin-top: 15px;
+}
+.about-me .My-imag{
+	width: 40%;
+	float: left; 
+	height: 100%;
+}.about-me .My-imag img{
+	width: 100%;
+	height: 100%;
+}
+.about-me .info p {
+	color: #8e8e8e;
+}
+.about-me .info .ul-info {
+	list-style: none;
+	padding: 0;
+	margin:10px 0 20px 0;
+}
+.about-me .info .ul-info li {
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+.about-me .info .ul-info li span{
+	font-weight: bold;
+}
+.about-me .info .ul-info li span:nth-child(2){
+	color: #8e8e8e;
+	font-weight: normal;
+}
+.about-me .info h4 {
+	padding: 10px 0 10px 0;
+}
+.about-me .info .ul-icons{
+	list-style: none;
+	padding: 0;
+	margin:10px 0 20px 0;
+}
+.about-me .info .ul-icons li {
+	display: inline-block;
+	margin-right: 15px;
+}.about-me .info .ul-icons li a {
+	color: #000;
+}
+.about-me .info .ul-icons li a:hover {
+	color: #0187ff;
+}
+
+/*end About me*/
+
+/*start skills*/
+
+.skills {
+	background-color: #F7F7FF;
+	padding: 70px 0 70px 0;
+}
+.skills .texts{
+	width: 50%;
+	float: left;
+	margin-right: 3%;
+
+}.skills .texts p {
+	margin-top: 22px;
+	color: #8e8e8e;
+}
+.skills .texts a {
+	margin-top: 15px;
+}
+.skills .progres{
+	width: 47%;
+	float: left;
+	font-weight: bold;
+	margin-top:36px
+}
+.skills .progres .prog{
+	margin-bottom: 10px
+}
+.skills .progres .org span{
+	display: block;
+	background-color: #0187ff;
+	height: 5px;
+}
+.skills .progres .org{
+	position: relative;
+}
+.skills .progres .org strong{
+	position: absolute;
+	font-weight: normal;
+	font-size:12px;
+	top:-18px;
+}
+/*end skills*/
+/*start my services*/
+
+.my-services{
+	
+	text-align: center;
+	background: url("../images/back2.jpg") no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover; 
+	min-height: 600px;
+	width:100%;
+}
+.my-services .overlayWihte{
+	background-color: rgba(255,255,255,0.9);
+	width: 100%;
+	height: 100%;
+	padding: 60px 0 5px 0;
+	padding-bottom: 40px;
+	min-height: 600px;
+}.my-services .span-h2 .who{
+	background-color: #0187ff;
+	color: #FFF;
+	padding: 5px 20px;
+	position: relative;
+}
+.my-services .span-h2 .who:after{
+	content: "";
+    position: absolute;
+	width: 20%;
+	height: 100%;
+	top: 0px;
+    right: -26px;
+    border-width: 14px;
+    border-style: solid;
+	border-color: #0187ff transparent #0187ff #0187ff;
+    display: block;
+    position: absolute;
+}
+.my-services .span-h2 .who:before{
+	content: "";
+    position: absolute;
+	width: 20%;
+	height: 100%;
+	top: 0px;
+    left: -26px;
+    border-width: 14px;
+    border-style: solid;
+	border-color: #0187ff #0187ff #0187ff transparent;
+    display: block;
+    position: absolute;
+}
+
+.my-services .span-h2 h2{
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+.my-services .span-h2 .aboutme {
+	border-bottom: 2px solid #19961c;
+}
+.my-services.span-h2 .aboutme h2{
+	margin-top: 15px;
+
+}
+.my-services .services{
+	margin-top: 50px;
+}
+.my-services .services .box{
+	width: 25%;
+	float: left;
+}
+.my-services .services .box i {
+	background-color: #0187ff;
+	color: #FFF;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-bottom:20px;
+}.my-services .services .box h6{
+margin-bottom:20px;
+}.my-services .services .box p{
+	color: #8e8e8e;
+
+}.my-services .services .chevron{
+	margin-top: 25px;
+color: #0187ff;
+margin-bottom: 30px
+}
+.my-services .services .chevron i:nth-child(2){
+	margin-left: 20px;
+}
+/*end my services*/
+/*start footer*/
+.footer{
+
+}
+.footer p {
+	display: inline-block;
+	float: left;
+	padding: 0;
+	margin:0;
+}
+.footer ul {
+	list-style: none;
+	display: inline-block;
+	float: right;
+	padding: 0;
+	margin:0;
+}
+.footer ul li{
+	display: inline-block;
+	float: left; 
+	margin-left: 15px;
+
+}.footer ul li a{
+	color: #d4d4d4;
+
+}
+.footer ul li a:hover{
+	color: #0187ff;
+
+}
+.footer p a{
+	color: #d4d4d4;
+
+}
+.footer p a:hover{
+	color: #0187ff;
+
+}
+.footer .overlayBlack{
+	padding:20px 0 40px 0;
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,0.6);
+	color: #d4d4d4
+}
+/*end footer*/
+
+/*start my fram work*/
+ .main-btn{
+	background-color: #0187ff;
+	color: #FFF;
+	margin-left: 15px;
+	padding: 5px 25px;
+} .main-btn:first-of-type{
+	margin-left: 0;
+}
+.clearfix{
+	clear: both
+}
+a:hover{
+	text-decoration:none;
+	color: #FFF;
+}
+/*end my fram work*/

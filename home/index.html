@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- NAV -->
+    <!-- <link rel="stylesheet"  href="../general/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet"  href="../general/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet"  href="../general/css/main.css"> -->
+    <link rel="stylesheet"  href="../general/css/nav.css">
+
+    <!--Home-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+      Your Souq is now Amazon.eg | Welcome to Amazon.eg in Egypt. Online
+      Shopping for Electronics, Apparel, Beauty and Grooming, Grocery and more
+    </title>
+  </head>
+  <body class="bg-body-custome">
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #131921;">
+      <a class="navbar-brand" href="#"><img src="../general/assets/amazon.png" style="height:80px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+  
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Deliver to <span style="display: block;">egypt</span>  <span class="sr-only">(current)</span></a>
+        </li> -->
+  
+  
+        <!-- Button trigger modal -->
+        <button id="btn-modal" type="button" class="btn btn-modal" data-toggle="modal" data-target="#exampleModal">
+          Deliver to <span style="display: block;">egypt</span>  <span class="sr-only">(current)</span>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choose Your Governorate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <select id="selectGove" name="selectGove" onchange="changopt()">
+              <option value="Cairo">Cairo</option>
+              <option value="Alexandria">Alexandria</option>
+              <option value="Gizeh">Gizeh</option>
+              <option value="Port Said">Port Said</option>
+              <option value="Luxor">Luxor</option>
+              <option value="al-Mansura">al-Mansura</option>
+              <option value="Asyut">Asyut</option>
+              <option value="Ismailia">Ismailia</option>
+              <option value="Fayyum">Fayyum</option>
+              <option value="Aswan">Aswan</option>
+              <option value="al-Minya">al-Minya</option>
+              <option value="Beni Suef">Beni Suef</option>
+              <option value="Hurghada">Hurghada</option>
+            </select>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- Modal -->
+  
+        
+        <li  class="search">
+          <form class="form-inline my-2 my-lg-0 searchForm" onsubmit="submitSearchQuery()" action="../search/search.html" method="get">
+            <input class="form-control mr-sm-2 " name="searchQuery" type="search" id="serchQuery" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit">Search</button>
+          </form>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            EN EGYPT
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"> العربية  - AR </a>
+            <a class="dropdown-item" href="#">English - EN</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+          </li>
+          <li>
+        </li class="nav-item"><a class="nav-link" href="../cart/cart.html" >Cart</a></li>
+          </li class="nav-item"><a class="nav-link" onclick="profile()" href="profile.html" >Your Profile</a></li>
+          </li class="nav-item"><a class="nav-link" onclick="logout()" href="#">Log Out</a></li>
+        </ul>
+  
+        
+        <!--search -->
+        
+        <!--search -->
+      </div>
+      </nav>
+
+      <div class="secondNav">
+        <ul class="categories" id="categories">
+          
+        </ul>
+        <div class="secondNavImg">
+          <img src="../general/assets/secondNav.jpg" >
+        </div>
+      </div>  
+
+      <!--Home-->
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark"></nav>
+    </header>
+    <!-- Header carousal -->
+    <div
+      id="myCarousel"
+      class="carousel slide mb-6 position-absolute"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img
+            class="card-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-six.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-five.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-four.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-three.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+        <div class="carousel-item active carousel-item-start">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-two.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+        <div class="carousel-item carousel-item-next carousel-item-start">
+          <img
+            class="bd-placeholder-img"
+            width="100%"
+            height="100%"
+            src="./assets/header-carousal-one.jpg"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev height50"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button
+        class="carousel-control-next height50"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <!-- categories cards -->
+    <div
+      id="header-cards"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3 m-2 position-absolute mt-12rem"
+    ></div>
+    <!-- first Slider -->
+    <section
+      class="pt-4 pb-3 mt-66rem bg-white height-450 mx-3 position-relative"
+    >
+      <div class="container max-width100">
+        <div class="row px-5">
+          <div class="col-5 d-flex flex-row">
+            <h4>
+              Shop Today's Deals
+              <span class="mx-3 p-1" style="font-size: small">
+                <a class="text-decoration-none" href="">See more deals</a>
+              </span>
+            </h4>
+          </div>
+          <div class="col-6 text-right">
+            <button
+              class="carousel-control-prev mt-1250 ml--50"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon bg-dark"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next mr--50"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon bg-dark"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+          <div class="col-12">
+            <div
+              id="carouselExampleIndicators2"
+              class="carousel slide"
+              data-ride="carousel"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Second Slider -->
+
+    <section class="pt-4 pb-3 mt-5 bg-white height-400 mx-3 position-relative">
+      <div class="container max-width100">
+        <div class="row px-5">
+          <div class="d-flex flex-row">
+            <h4>
+              Related to items you've viewed
+              <span class="mx-3 p-1" style="font-size: small">
+                <a class="text-decoration-none" href="">See more deals</a>
+              </span>
+            </h4>
+          </div>
+          <div class="col-6 text-right">
+            <button
+              class="carousel-control-prev ml--50"
+              type="button"
+              data-bs-target="#carouselExampleIndicators3"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon bg-dark"
+                aria-hidden="true"
+              ></span>
+            </button>
+            <button
+              class="carousel-control-next mr--50"
+              type="button"
+              data-bs-target="#carouselExampleIndicators3"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon bg-dark"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+          <div class="col-12">
+            <div
+              id="carouselExampleIndicators3"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- second cards category -->
+    <div
+      id="second-category-component"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3 m-2"
+    ></div>
+    <div class="card m-5">
+      <img width="70%" src="./assets/Capture_EN.png" class="card-img" alt="..." />
+    </div>
+    <!-- third cards category -->
+    <div
+      id="third-category-component"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3 m-2"
+    ></div>
+    <a
+      href="#"
+      class="text-decoration-none"
+      onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0; event.preventDefault();"
+    >
+      <div class="bg-grey text-center text-white p-2">Back to top</div>
+    </a>
+    <!-- footer -->
+
+    <footer class="footer-99382 bg-footer text-white text-decoration-none">
+      <div class="container pt-4">
+        <div class="row">
+          <div class="col-md-4 pr-md-5">
+            <a
+              class="text-decoration-none text-white"
+              href="#"
+              class="footer-site-logo d-block mb-4"
+              ><img src="./assets/Amazon_logo.svg.png" width="100px" alt=""
+            /></a>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              quasi perferendis ratione perspiciatis accusantium.
+            </p>
+          </div>
+          <div class="col-md">
+            <h3>Discover</h3>
+            <ul class="list-unstyled nav-links">
+              <li>
+                <a class="text-decoration-none text-white" href="#">Home</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">About Us</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Services</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h3>About</h3>
+            <ul class="list-unstyled nav-links">
+              <li>
+                <a class="text-decoration-none text-white" href="#">Clients</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Team</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Career</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Journal</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h3>Help</h3>
+            <ul class="list-unstyled nav-links">
+              <li>
+                <a class="text-decoration-none text-white" href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-white" href="#">Partners</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="copyright mt-5 pt-5">
+              <p>
+                <small
+                  >© 2019—2020 All Rights Reserved1996–2023, Amazon.com, Inc. or
+                  its affiliates.</small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/c1a99da7f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+    <script src="../general/js/jquery-3.3.1.min.js"></script>
+    <script src="../general/js/popper.min.js"></script>
+    <script src="../general/js/bootstrap.min.js"></script>
+    <script src="../general/js/nav.js"></script>
+  </body>
+</html>
