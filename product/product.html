@@ -1,22 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="products.style.css">
-        <title>Product</title>
-    </head>
-    <body>
-        
-        <div id="mainContainer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="products.style.css" />
+    <title>product</title>
+  </head>
+  <body>
+    <!-- content -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row gx-5">
+          <aside class="col-lg-6" id="image-container"></aside>
+          <main class="col-lg-6">
+            <div class="ps-lg-3">
+              <h4 class="title text-dark" id="product-title">
+                Quality Men's Hoodie for Winter, Men's Fashion <br />
+                Casual Hoodie
+              </h4>
+              <div class="d-flex flex-row my-3">
+                <div class="mb-1 me-2" id="rating-div">
+                  <span class="ms-1" id="rate"> </span>
+                </div>
+                <span class="text-muted" id="ratedBy"
+                  ><i class="fas fa-shopping-basket fa-sm mx-1"></i>154
+                  orders</span
+                >
+                <span class="text-success ms-2">In stock</span>
+              </div>
+
+              <div class="mb-3">
+                <span class="h5" id="price"> </span>
+              </div>
+
+              <p id="product-Description"></p>
+
+              <div class="row">
+                <dt class="col-3">Type:</dt>
+                <dd class="col-9" id="category">Regular</dd>
+                <div class="d-flex justify-content-center mb-3">
+                  <div
+                    class="p-1"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                    "
+                  >
+                    <img
+                      class=""
+                      width="60px"
+                      height="60px"
+                      src="https://m.media-amazon.com/images/G/42/A2I-Convert/mobile/IconFarm/icon-cod._CB638858551_.png"
+                      alt=""
+                    />
+                    <span class="text-muted">Cash on Delivery</span>
+                  </div>
+                  <div
+                    class="p-1"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                    "
+                  >
+                    <img
+                      width="60px"
+                      height="60px"
+                      src="https://m.media-amazon.com/images/G/42/A2I-Convert/mobile/IconFarm/icon-returns._CB403797073_.png"
+                      alt=""
+                    />
+                    <span class="text-muted">15 days returnable</span>
+                  </div>
+
+                  <div
+                    class="p-1"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                    "
+                  >
+                    <img
+                      width="60px"
+                      height="60px"
+                      src="https://m.media-amazon.com/images/G/42/A2I-Convert/mobile/IconFarm/trust_icon_free_shipping_81px._CB590597072_.png"
+                      alt=""
+                    />
+                    <span class="text-muted">Free Delivery</span>
+                  </div>
+                  <div
+                    class="p-1"
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                    "
+                  >
+                    <img
+                      width="60px"
+                      height="60px"
+                      src="https://m.media-amazon.com/images/G/42/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB403797073_.png"
+                      alt=""
+                    />
+                    <span class="text-muted">Deliverd by Amazon</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+
+              <button id="cart-btn" class="btn btn-bg shadow-0">
+                <i class="me-1 fa fa-shopping-basket"></i> Add to cart
+              </button>
+              <div id="added-product" class="p-1"></div>
+            </div>
+          </main>
         </div>
+      </div>
+    </section>
 
-        <button id="btnn">
-            Cart Page
-        </button>
-
-        
-
-        <script src="products.script.js"></script>
-    </body>
+    <script
+      src="https://kit.fontawesome.com/c1a99da7f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./products.script.js"></script>
+  </body>
 </html>
