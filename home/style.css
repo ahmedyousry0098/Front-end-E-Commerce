@@ -88,3 +88,12 @@ padding: 1rem;
 .bg-footer{
   background-color: #232F3E;
 }
+
+.seeMoreBtn {
+  position:absolute;bottom:5px;color:rgb(150,150,150)
+}
+
+.seeMoreBtn:hover {
+  color: blue;
+  cursor: pointer
+}

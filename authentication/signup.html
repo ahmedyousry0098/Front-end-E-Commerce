@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="pro.css" rel="stylesheet">
     
@@ -23,7 +23,7 @@
             <div class="input-control">
                 <label for="username">Username</label><br>
                 <i class="fa-solid fa-user"></i>
-                <input id="username"  name="username"   type="text" placeholder="username" >
+                <input id="username"  name="username" onblur="userNameErr()"  type="text" placeholder="username" >
 
                 
                 <div id="U"></div>
@@ -40,7 +40,7 @@
                 
                 <i class="fa-solid fa-lock"></i>
 
-                <input id="signuppass"  onblur="Pfunction()" name="signuppass"  type="password"  placeholder="at least 6 characters" 
+                <input id="signuppass" name="signuppass"  type="password"  placeholder="at least 6 characters" 
                   title="Password length must be at least 6 characters" required>
                 <div id="P"></div>
             </div><br>
@@ -49,13 +49,13 @@
                 <i class="fa-solid fa-key"></i>
                 <input id="confirmPassword"name="confirmPassword" onblur="cfunction()" type="password" placeholder="password" required>
                 <div id="c"></div>
-                
+                <br>
 
             </div>
             <button type="submit"  id="signup" onsubmit="handleLoginSubmit()" >Sign Up</button><br>
             
 
-           <small> By creating a new account, you agree to <a  class="ink" href="#">Terms of use </a> and  <a  class="ink" href="#">privacy</a></small>
+           <small> By creating a new account, you agree to <a  class="ink" href="#">Terms of use </a> and  <a  class="ink" href="#"> privacy</a></small>
             <br>
             <br>
             <small> you have an Amazon account? <a class="ink" href="./signin.html">sign in</a></small>
@@ -73,7 +73,7 @@
     </div>
     <br>
     <br> 
-        <footer align="center">
+        <footer align="center" style="padding: 10px">
             <a class="ink" href="#">Terms of use </a>
             <a class="ink" href="#">privacy notice</a>
             <a class="ink" href="#">Help</a>

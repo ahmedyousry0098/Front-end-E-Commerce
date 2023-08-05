@@ -29,7 +29,7 @@ async function renderProductsData() {
                         </div>
                           <div class="card-body">
                             <p class="card-text">
-                              <a class="text-decoration-none">See more details</a>
+                              <a class="text-decoration-none seeMoreBtn">See more details</a>
                             </p>
                           </div>
                       </div>
@@ -149,7 +149,7 @@ function initiateSecondCardsCategories(productsData) {
   
   for (let product of productsData.sort((a,b) => b.price-a.price).slice(0,4)) {
     cardsContainer.innerHTML += `<div  id="${product.id}" onClick="openingProductPage(${product.id})" class=" col container-md ">
-        <div class="card shadow-sm container-md height-380">
+        <div class="card shadow-sm container-md height-400">
           <h4 class="pt-2">${product.title}</h4>
                 <div
                   class="img-card-height-fixed align-content-center align-self-center"
@@ -165,7 +165,7 @@ function initiateSecondCardsCategories(productsData) {
                         </div>
                                   <div class="card-body">
                                     <p class="card-text">
-                                      <a class="text-decoration-none">See more details</a>
+                                      <a class="text-decoration-none seeMoreBtn">See more details</a>
                                     </p>
                                   </div>
                       </div>
@@ -196,7 +196,7 @@ function initiateThirdCardsCategories(productsData) {
                         </div>
                                   <div class="card-body">
                                     <p class="card-text">
-                                      <a class="text-decoration-none">See more details</a>
+                                      <a class="text-decoration-none seeMoreBtn">See more details</a>
                                     </p>
                                   </div>
                       </div>

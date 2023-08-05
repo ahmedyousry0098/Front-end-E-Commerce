@@ -31,7 +31,7 @@ async function searchs(){ // function serach query name in api products title
 		console.log(searchedProducts);
 		for (let product of searchedProducts) {
 			productDiv.innerHTML +=`
-									<div class="row" ">
+									<div class="row" onclick="openProductPage(${product.id})">
 										<div class="prodImageSerach col-md-6"><img src="${product.image}"></div>
 											<div class="prodDataSerach col-md-6"><h2><a href="product.html" class="searchProductLink">${product.title}</a></h2>
 											<p>${product.description}</p>

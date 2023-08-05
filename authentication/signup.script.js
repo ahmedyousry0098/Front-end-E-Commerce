@@ -11,7 +11,6 @@ function validatePassword(password) {
 
 function validateName(username) {
   const userNamePattern = /^[a-zA-Z0-9]+([._ ]?[a-zA-Z0-9]+)*$/
-  console.log(userNamePattern.test(username));
   return userNamePattern.test(username);
 }
 
@@ -59,30 +58,46 @@ function Efunction(){
   }
 }
 
-function Pfunction(){
-  const password = document.getElementById("signuppass").value;
-  if(validatePassword(password)){
-    document.getElementById("P").innerHTML="valid Password "
-    document.getElementById("P").style.color="color"
-  }
-  else{
-    document.getElementById("P").innerHTML="invalid Password"
-  }
-}
+// function Pfunction(){
+//   const password = document.getElementById("signuppass").value;
+//   if(validatePassword(password)){
+//     document.getElementById("P").innerHTML="valid Password "
+//     document.getElementById("P").style.color="color"
+//   }
+//   else{
+//     document.getElementById("P").innerHTML="invalid Password"
+//   }
+// }
 
 function cfunction() 
 {
   const confirmPassword=document.getElementById("confirmPassword").value;
   const password = document.getElementById("signuppass").value;
-    if(validatePasswordMatch(password, confirmPassword)){
+    if(validatePasswordMatch(password, confirmPassword) && validatePassword(password)){
       document.getElementById("c").innerHTML="valid Password "
       document.getElementById("c").style.color="green "
       document.getElementById("c").style.fontWeight="bold "
     }
-    else{
-      document.getElementById("c").innerHTML="invalid Password"
+    else if (!validatePasswordMatch(password, confirmPassword)) {
+      document.getElementById("c").innerHTML="Confirmation Password Must be equal Password"
       document.getElementById("c").style.color="red"
       document.getElementById("c").style.fontWeight="bold"
     }
-  
+    else if (!validatePassword(password)) {
+      document.getElementById("c").innerHTML="Invalid Or Too Short Password "
+      document.getElementById("c").style.color="red "
+      document.getElementById("c").style.fontWeight="bold "
+    }
+}
+
+function userNameErr() {
+  const username = document.getElementById("username").value;
+  if(validateName(username)){
+    document.getElementById("U").innerHTML="valid username "
+    document.getElementById('U').style.color = 'green'
+  }
+  else{
+    document.getElementById("U").innerHTML="invalid username"
+    document.getElementById('U').style.fontWeight = 'bold'
+  }
 }

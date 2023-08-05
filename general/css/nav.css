@@ -47,7 +47,7 @@
 
 	.categories li:hover {
 		font-size: 17px;
-		transition: 0.3s;
+		transition: 0.4s;
 		color: rgb(13,108,239);
 	}
 	#btn-modal{
@@ -68,4 +68,14 @@
 	.navbar-toggler{
 		background-color: #febd69;
    		border: 1px solid #febd69;
+	}
+
+	.nav-link {
+		color:white !important
+	}
+
+	.nav-link:hover {
+		font-size: 18px;
+		color: blue !important;
+		transition: 0.5s;
 	}
