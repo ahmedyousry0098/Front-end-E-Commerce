@@ -49,7 +49,7 @@ renderProductsData();
 
 // handling oppening poduct detailed page
 function openingProductPage(id) {
-  open(`../product/product.html?id=${id}`);
+  open(`../product/product.html?id=${id}`, "_self");
 }
 // initiating first sliders
 function initiateFirstSlider(productsData) {

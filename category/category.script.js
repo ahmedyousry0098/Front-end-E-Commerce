@@ -45,7 +45,7 @@ function initPageLayout(products) {
         `
         mainContainer.appendChild(itemContainer)
         itemContainer.addEventListener('click', function() {
-            window.open(`../product/product.html?id=${product.id}`)
+            window.open(`../product/product.html?id=${product.id}`, "_self")
         })
     }
     

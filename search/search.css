@@ -1,0 +1,48 @@
+#h1,.row{
+    margin-bottom: 60px;
+}
+
+.row {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 5px
+}
+#h2 a{
+    
+    cursor: pointer;
+    text-decoration-line: none!important;
+}
+.searchProductLink {
+    cursor: pointer;
+    text-decoration-line: none!important;
+    color:#febd69;
+    
+}
+.searchProductLink:hover {
+    cursor: pointer;
+    text-decoration-line: none!important;
+    color:#febd69;
+    
+}
+/* .prodImageSerach {
+
+} */
+.prodImageSerach,.prodDataSerach{
+    display: inline-block;
+}
+.prodImageSerach img {
+    width: 45%;
+}
+.prodAddToCart{
+    background-color: #febd69;
+    color: white;
+}
+.prodAddToCart:hover{
+    background-color: white;
+    color: #febd69;
+    border: 1px solid #febd69;
+}
+
+.dollar{
+    color: #febd69;
+}

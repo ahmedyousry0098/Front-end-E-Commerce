@@ -1,0 +1,161 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Amazon Ember Arabic",Arial,sans-serif;
+    box-sizing: border-box;
+}
+
+.put{
+    width:350px;
+    height: 300px;
+    position:relative;
+    top: 30%;
+    left: 40%;
+  
+    background-color :white;
+    padding : 10px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color:black;
+    border-radius: 8px; 
+    
+
+}
+put:focus{
+    background-color:lightblue;
+}
+.input{
+    width:350px;
+    height: 400px;
+    position:relative;
+    top: 30%;
+    left: 40%;
+  
+    background-color :white;
+    padding : 10px;
+    border-width: 1px;
+    border-style: ridge;
+    border-color:black;
+    border-radius: 8px; 
+    
+
+}
+input:focus{
+    background-color:lightblue;
+}
+im{
+    width: 200px;
+    height: 200px;
+    padding-top: 50px;
+}
+header{
+    width: auto;
+    height: 20%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer{
+    background-color:rgb(245, 245, 245);
+    margin-bottom: 0%;
+    height: 170px;
+}
+#signup{
+    
+  background-color: yellow;
+  border: none;
+  color: black;
+  
+
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  
+  border-radius :40px;
+  width:260px ;
+  height: 40px;
+text-align: center;}
+  #signin{
+    
+    background-color: yellow;
+    border: none;
+    color: black;
+  
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    
+    border-radius :40px;
+    width:260px ;
+    height: 40px;}
+  .copy{
+    font-size:0.875em ;
+    text-align: center;
+  }
+.ink{
+    text-decoration: none;
+    color: blue;
+    
+
+
+}
+a:hover{
+    text-decoration: underline;
+    color:orange;
+}
+.er{
+    width:500px;
+    border-width: 50px;
+    border-color: blue;
+    text-align: center;
+    position:relative;
+    left: 35%;
+
+    
+
+}
+
+ .hr{
+    width: 50px;
+    display: inline-block;
+   
+ }
+ .are{
+    width: 250px;
+    display: inline-block;
+    color: #767676;
+
+ }
+ .btn{
+    border-radius: 8px;
+    width: 350px;
+ }
+  
+    
+    
+    #E{
+        color:red;
+        font-size: small;
+    }
+     
+    #U{
+        color:red;
+        font-size: small;
+    }
+     
+    #P{
+        color:red;
+        font-size: small;
+    }
+    #c{
+        color:red;
+        font-size: small;
+    }
+    #h3{
+        width: 40px;
+        height: 4px;
+        border-radius: 3px;
+        background-color:black;
+        position: absolute;
+    }
+    

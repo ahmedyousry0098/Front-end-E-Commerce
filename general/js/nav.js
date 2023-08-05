@@ -30,7 +30,7 @@ function submitSearchQuery() {
 }
 function redirectToCatPage(){
 	window.localStorage.setItem("filter",this.name)
-	open(`../category/category.html`)
+	open(`../category/category.html`, "_self")
 }
 
 
@@ -50,7 +50,7 @@ function changopt(){
 
 function logout(){
 	localStorage.clear();
-	open("login.html")
+	open("../authentication/signup.html", "_self")
 
 }
 

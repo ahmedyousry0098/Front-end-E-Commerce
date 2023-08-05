@@ -63,7 +63,6 @@ function initProductRating(product) {
   const productDescription = document.getElementById("product-Description");
   const category = document.getElementById("category");
   let rating = product.rating.rate;
-  console.log(rating);
   let stars = document.createElement("span");
   for (i = 0; i < 5; i++) {
     if (i < rating) {
@@ -75,7 +74,7 @@ function initProductRating(product) {
   productRatingData.append(stars);
   rate.innerHTML = product.rating.rate;
   ratedBy.innerHTML = product.rating.count;
-  price.innerHTML = product.price + " LE";
+  price.innerHTML = product.price + " $";
   productDescription.innerHTML = product.description;
   category.innerHTML = product.category;
 }
@@ -115,5 +114,5 @@ function initAddToCartBtn(product) {
   }
 }
 function openCartPage() {
-  window.open("../cart/cart.html", "_blank");
+  window.open("../cart/cart.html", "_self");
 }

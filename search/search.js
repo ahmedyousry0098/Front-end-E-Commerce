@@ -6,49 +6,70 @@ async function getProducts() {
 	return products
 }
 let searchedProducts = []
-function filterProducts(products) {
+async function filterProducts() {
+	const allProducts = await getProducts()
 	const searchBy = localStorage.getItem('search')
 	if (!searchBy) return products
 	const pattern = new RegExp(`${searchBy}`,"i")
-	searchedProducts = products.filter(prod => pattern.test(prod.title))
+	searchedProducts = allProducts.filter(prod => pattern.test(prod.title))
 }
-
-// async function initPage() {
-// 	const products = await getProducts()
-// 	searchedProducts = filterProducts(products)
-// }
-
-// initPage()
 
 function submitSearchQuery() {
-	var val = document.getElementById("serchQuery").value
-	console.log({val})
-	window.localStorage.setItem("search",val)
+	let searchTerm = document.getElementById("serchQuery").value
+	window.localStorage.setItem("search",searchTerm)
 }
 
-async function searchs(nameKey){ // function serach query name in api products title
+async function searchs(){ // function serach query name in api products title
 
-	let productsArr = await getProducts()
-	//for (var i=0; i < productsArr.length; i++) {
-	//	if(productsArr[i].title.includes(nameKey)==true){
-	//		searchedProducts.push(productsArr[i])
-	//		console.log("for")
-	//	}
-		
-	//}
+	let searchTerm = localStorage.getItem("search")
+	let searchH1 = document.getElementById("h1");
+	let productDiv = document.getElementById("container")
+	searchH1.innerHTML+=searchTerm
+	await filterProducts()
 
-	filterProducts(productsArr)
-	console.log(searchedProducts);
-	for (let product of searchedProducts) {
-		var productDiv = document.getElementById("container")
-		productDiv.innerHTML +=`<div class="col-md-12">
-									<div><img src="${product.image}"></div>
-									<div><h2>${product.title}</h2></div>
-									<p>${product.description}</p>
-								</div>`;
+	if(searchedProducts.length){
+		console.log(searchedProducts);
+		for (let product of searchedProducts) {
+			productDiv.innerHTML +=`
+									<div class="row" ">
+										<div class="prodImageSerach col-md-6"><img src="${product.image}"></div>
+											<div class="prodDataSerach col-md-6"><h2><a href="product.html" class="searchProductLink">${product.title}</a></h2>
+											<p>${product.description}</p>
+											<h3>${product.price}<span class="dollar">$</span></h3>
+											<hr>
+											<button type="button" class="btn prodAddToCart" onclick="addToLocalStorage(${product.id})"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>	
+										</div>
+									</div>	
+										`;
+		}
 	}
+	else {
+		productDiv.innerHTML +=`
+		<div class="alert alert-danger" role="alert">
+		There's No Item Like ' ${window.localStorage.getItem("search")}'  In Our Site
+		</div>
+		`
+		
+	}
+	
 }
- 
+
+function openProductPage(productId) {
+	open(`../product/product.html?id=${productId}`, '_self')
+}
+
+function addToLocalStorage(id) {
+    const cratIds = localStorage.getItem("cartIds");
+    if (!cratIds) {
+      localStorage.setItem("cartIds", JSON.stringify(id));
+    } else {
+      localStorage.setItem("cartIds", `${cratIds},${id}`);
+    }
+    // initPopupAlert(`Item ${title} added successfully to cart`);
+    // setTimeout(() => {
+    //   document.getElementById("alertBox").remove();
+    // }, 2000);
+  }
 
 searchs(window.localStorage.getItem("search"))  // use function
 	

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    
+</head>
+<body>
+    <header>
+        <a href="#"> 
+        <img src="amazo2.png" alt="" id="a">
+     </a>
+         
+     </header>
+    <container class="cont">
+        <div class="put">
+        <form id="loginform" action="home.html">
+            <h3 >Sign in</h3>
+            <div id="h3"></div><br>
+            
+            <div class="input-control">
+                
+            </div>
+            <div class="input-control">
+                <label for="signinemail">Enter Your email</label>
+                <br><i class="fa-solid fa-envelope-open-text"></i>
+                <input id="signinemail" name="signinemail" type="email" placeholder="Enter your email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                <br>
+                <p id="emailStatus"></p><br>
+                
+                
+                <label for="signinpass">Password</label><br>
+                <i class="fa-solid fa-lock"></i>
+                
+                <input id="signinpass" name="signinpass"  type="password"  placeholder="at least 6 characters" 
+                title="Password length must be at least 6 characters" required>
+                <input type="checkbox" onclick="togglePasswordVisability()"><label>Show Password</label>
+                <p id="passwordStatus"></p><br>
+
+                <br>
+                <br>
+
+         
+
+            </div>
+            <input  type="submit"  id="signin" >
+            <br> <br>
+            
+
+            <small>create a new account, you agree to <a class="ink" href="#">Terms of use </a> and<a class="ink" href="#">privacy</a></small>
+            <br>
+            <br>
+            
+      
+     
+
+            </form>
+            </div>
+            <br>
+
+            
+            </div>
+
+            
+           
+
+            </container>
+            <div class="er" align="center">
+                <div class="hr"><hr></div> 
+                <div class="are">  Are you new to Amazon? 
+                </div>
+                <div class="hr"><hr></div><br><br><br>
+                <button class="btn"> <a class="ink" href="./signup.html">create your Amazon Account</a></button>
+
+            </div>
+            <br>
+
+            <br>
+            <br> 
+                <footer align="center">
+                    <a class="ink" href="#">Terms of use </a>
+                    <a class="ink" href="#">privacy notice</a>
+                    <a class="ink" href="#">Help</a>
+                    
+                    <br>
+        
+        <div class="Copy">
+                   <br>
+                   Copyright © 1996-2023 Amazon.com or its affiliates
+                    </div>
+                    
+        
+                    </footer>
+                    <script src="./login.script.js"></script>
+                    
+</body>
+</html>
