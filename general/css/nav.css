@@ -3,18 +3,18 @@
 	}
 	a, .btn-modal{
 		color: white;
+		/* width: 100px */
 	}
 	.btn-modal:hover{
 		color: white;
 		cursor: pointer;
 	}
 	.search{
-		width: 627px;
+		width: 700px;
 
 	}
 	.search form{
 		width: 100%;
-	
 	}
 
 	.searchForm {
@@ -34,14 +34,21 @@
 		display: inline-block;
 	}
 	.categories {
-		
-	padding: 0;
-    margin: 0;
+		padding: 0;
+		margin: 0;
 	}
 	.categories  ,
 	.categories li {
 		display: inline-block;
 		padding: 0 6px;
+		cursor: pointer;
+
+	}
+
+	.categories li:hover {
+		font-size: 17px;
+		transition: 0.3s;
+		color: rgb(13,108,239);
 	}
 	#btn-modal{
 		width: 7rem;
@@ -50,8 +57,8 @@
 	
 	.btn-outline-success {
 		background-color: #febd69;
-    color: white;
-	border-color: #febd69;
+		color: white;
+		border-color: #febd69;
 	}
 	.btn-outline-success:hover{
 		background-color: #fff;
@@ -60,6 +67,5 @@
 	}
 	.navbar-toggler{
 		background-color: #febd69;
-    border: 1px solid #febd69;
-	
+   		border: 1px solid #febd69;
 	}

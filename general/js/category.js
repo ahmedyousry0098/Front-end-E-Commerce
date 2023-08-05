@@ -13,13 +13,6 @@ function filterProducts(products) {
 	searchedProducts = products.filter(prod => pattern.test(prod.category))
 }
 
-// async function initPage() {
-// 	const products = await getProducts()
-// 	searchedProducts = filterProducts(products)
-// }
-
-// initPage()
-
 function submitSearchQuery() {
 	var val = document.getElementById("serchQuery").value
 	console.log({val})
@@ -29,13 +22,6 @@ function submitSearchQuery() {
 async function searchs(nameKey){ // function serach query name in api products title
 
 	let productsArr = await getProducts()
-	//for (var i=0; i < productsArr.length; i++) {
-	//	if(productsArr[i].title.includes(nameKey)==true){
-	//		searchedProducts.push(productsArr[i])
-	//		console.log("for")
-	//	}
-		
-	//}
 
 	filterProducts(productsArr)
 	console.log(searchedProducts);

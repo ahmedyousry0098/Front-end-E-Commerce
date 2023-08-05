@@ -3,15 +3,108 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="../general/css/bootstrap.min.css">
+        <link rel="stylesheet"  href="../general/css/font-awesome.min.css">
+        <link rel="stylesheet"  href="../general/css/main.css">
+        <link rel="stylesheet"  href="../general/css/nav.css">
         <link rel="stylesheet" href="cart.style.css">
+
         <title>Cart</title>
     </head>
     <body>
 
+        <nav class="navbar navbar-expand-lg" style="background-color: #131921;">
+            <a class="navbar-brand" href="../home/index.html" style="margin-left: 10px;"><img src="../general/assets/amazon.png" style="height:70px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+        
+              <!-- Button trigger modal -->
+              <button id="btn-modal" type="button" class="btn btn-modal" data-toggle="modal" data-target="#exampleModal">
+                Deliver to <span style="display: block;">egypt</span>  <span class="sr-only">(current)</span>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Choose Your Governorate</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                  <div class="modal-body">
+                  <select id="selectGove" name="selectGove" onchange="changopt()">
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Gizeh">Gizeh</option>
+                    <option value="Port Said">Port Said</option>
+                    <option value="Luxor">Luxor</option>
+                    <option value="al-Mansura">al-Mansura</option>
+                    <option value="Asyut">Asyut</option>
+                    <option value="Ismailia">Ismailia</option>
+                    <option value="Fayyum">Fayyum</option>
+                    <option value="Aswan">Aswan</option>
+                    <option value="al-Minya">al-Minya</option>
+                    <option value="Beni Suef">Beni Suef</option>
+                    <option value="Hurghada">Hurghada</option>
+                  </select>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- Modal -->
+        
+              
+              <li  class="search">
+                <form class="form-inline my-2 my-lg-0 searchForm" onsubmit="submitSearchQuery()" action="../search/search.html" method="get">
+                  <input class="form-control mr-sm-2 " name="searchQuery" type="search" id="serchQuery" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0 "  type="submit">Search</button>
+                </form>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  EN EGYPT
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"> العربية  - AR </a>
+                  <a class="dropdown-item" href="#">English - EN</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                <li>
+              </li class="nav-item"><a class="nav-link" href="../cart/cart.html" >Cart</a></li>
+                </li class="nav-item"><a class="nav-link" onclick="profile()" href="profile.html" >Your Profile</a></li>
+                </li class="nav-item"><a class="nav-link" onclick="logout()" href="#">Log Out</a></li>
+              </ul>
+        
+              
+              <!--search -->
+              
+              <!--search -->
+            </div>
+            </nav>
+      
+            <div class="secondNav">
+              <ul class="categories" id="categories">
+                
+              </ul>
+              <div class="secondNavImg">
+                <img src="../general/assets/secondNav.jpg" >
+              </div>
+            </div>  
         <div id="mainContainer">
 
         </div>
-        
+
+        <script src="../general/js/jquery-3.3.1.min.js"></script>
+        <script src="../general/js/popper.min.js"></script>
+        <script src="../general/js/bootstrap.min.js"></script>
+        <script src="../general/js/nav.js"></script>
         <script src="cart.script.js"></script>
     </body>
 </html>

@@ -14,9 +14,7 @@ async function cat(){ // function serach query name in api products title
 		let ulCategories= document.getElementById("categories");
 		let liCategory= document.createElement("li");
 		let btnCategory=document.createElement("a");
-		
 		btnCategory.setAttribute("name",category)
-		// btnCategory.setAttribute("href","../category/category.html")
 		btnCategory.setAttribute("id",category)
 		btnCategory.addEventListener("click",redirectToCatPage)
 		btnCategory.textContent=category;
