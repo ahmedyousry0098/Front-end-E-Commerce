@@ -28,19 +28,27 @@ function initPageLayout(products) {
     let mainContainer = document.getElementById('mainContainer')
     for (let product of products) {
         const itemContainer = document.createElement('div')
+        
+        // itemContainer.setAttribute('class', 'col container-md')
+        itemContainer.setAttribute('id', 'itemContainer')
+        itemContainer.innerHTML = `
+        <div class="">
+            <p id="title" class="pt-1"> ${product.title} </p>
+            <div class="">
+                <img src=${product.image} id="productImg" class="">
+            </div>
+            <div class="">
+                <!-- <p id="description" class=""> ${product.description} </p> -->
+                <p id="price" class="t"> ${product.price}$ </p>
+            </div>
+        </div>
+        `
+        mainContainer.appendChild(itemContainer)
         itemContainer.addEventListener('click', function() {
             window.open(`../product/product.html?id=${product.id}`)
         })
-        itemContainer.setAttribute('id', 'itemContainer')
-        itemContainer.innerHTML = `
-            <img src=${product.image} id="productImg">
-            <p id="title"> ${product.title} </p>
-            <p id="description"> ${product.description} </p>
-            <p id="price"> ${product.price}$ </p>
-        `
-        mainContainer.appendChild(itemContainer)
     }
-
+    
 }
 
 async function initCategoryPage() {

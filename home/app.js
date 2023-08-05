@@ -147,10 +147,10 @@ function initiateSecondSlider(productsData) {
 function initiateSecondCardsCategories(productsData) {
   const cardsContainer = document.getElementById("third-category-component");
   
-  for (let product of productsData.slice(5,9)) {
+  for (let product of productsData.sort((a,b) => b.price-a.price).slice(0,4)) {
     cardsContainer.innerHTML += `<div  id="${product.id}" onClick="openingProductPage(${product.id})" class=" col container-md ">
         <div class="card shadow-sm container-md height-380">
-          <h4 class="pt-1">${product.title}</h4>
+          <h4 class="pt-2">${product.title}</h4>
                 <div
                   class="img-card-height-fixed align-content-center align-self-center"
                 >
@@ -178,7 +178,7 @@ function initiateSecondCardsCategories(productsData) {
 //third cards category
 function initiateThirdCardsCategories(productsData) {
   const cardsContainer = document.getElementById("second-category-component");
-  for (let product of productsData.slice(0,4)) {
+  for (let product of productsData.sort((a,b) => b.rating.rate-a.rating.rate).slice(0,4)) {
     cardsContainer.innerHTML += `<div  id="${product.id}" onClick="openingProductPage(${product.id})" class=" col container-md ">
         <div class="card shadow-sm container-md height-380">
           <h4 class="pt-1">${product.title}</h4>

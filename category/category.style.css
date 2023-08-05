@@ -2,45 +2,46 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 #mainContainer {
-    width: 100%;
+    width:90%;
     margin: auto;
     display: grid;
-    height: 100%;
-    justify-content: space-around;
-    align-items: space-between;
-    grid-template-columns: repeat(4, 22%);
-    grid-template-rows: repeat(2, 50%);
-    border: 1px solid
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 }
 
 #itemContainer {
     grid-column: span 1;
-    grid-row: span 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     background-color: rgb(247,247,247);
-    box-shadow: -10px 10px 10px rgb(200,200,200, 0.1);
+    box-shadow: -10px 10px 10px rgb(200,200,200, 0.3);
     cursor: pointer;
+    display: flex;
+    align-items: space-between;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    height: 400px;
 }
 
 img {
-    width: 100%;
-    height: 40%
+    width: 150px;
+    max-height: 10%
 }
 
 #title {
     font-size: 21;
     font-weight: bold;
-    height: 5%
 }
 
 #price {
     font-size: 20px;
     font-weight: bold;
-
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: rgb(130,150,150);
 }
