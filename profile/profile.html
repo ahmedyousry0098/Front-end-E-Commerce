@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edite Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"  href="../general/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="../general/css/main.css">
+    <link href="pro.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+    <a href="#"> 
+       <img src="../authentication/amazo2.png" alt="" id="im">
+    </a>
+        
+    </header>
+    <section>
+		<h2>Edite Your Profile</h2>
+        <div class="input">
+
+        <form id="signupform"  action="profile.html" method="post"> 
+            <div class="input-control">
+                <label for="username">Username</label><br><i class="fa-solid fa-user"></i><input class="form-control form-control-lg username" id="username" name="username" type="text" value="" >
+                
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Enter your email</label><br><i class="fa-solid fa-envelope"></i><input class="form-control form-control-lg email" id="email" name="email2" type="email" value required>
+                <div class="E"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label><br><i class="fa-solid fa-lock"></i><input class="form-control form-control-lg password" id="password" name="password2"  type="password"  value="" >
+                <div class=""></div>
+            </div>
+            <div class="input-control">
+                <label for="confirmPassword">Password again</label><br><i class="fa-solid fa-key"></i><input class="form-control form-control-lg confirmPassword"  id="confirmPassword"name="confirmPassword" type="password" value="" >
+                <div id="c"></div>
+                <br>
+
+            </div>
+			<div class="input-control">
+				<label>Governorate</label>
+                <i class="fa-solid fa-location-pin"></i>
+                <select id="selectGove" name="selectGove" class="form-control form-control-lg">
+					<option value="Cairo">Cairo</option>
+					<option value="Alexandria">Alexandria</option>
+					<option value="Gizeh">Gizeh</option>
+					<option value="Port Said">Port Said</option>
+					<option value="Luxor">Luxor</option>
+					<option value="al-Mansura">al-Mansura</option>
+					<option value="Asyut">Asyut</option>
+					<option value="Ismailia">Ismailia</option>
+					<option value="Fayyum">Fayyum</option>
+					<option value="Aswan">Aswan</option>
+					<option value="al-Minya">al-Minya</option>
+					<option value="Beni Suef">Beni Suef</option>
+					<option value="Hurghada">Hurghada</option>
+				</select>
+
+            </div>
+
+
+
+            <button type="submit"  id="sign">Save</button>
+          
+        </form>
+    
+        </div>
+  
+    </section>
+    <div>
+
+    </div>
+    <br>
+    <br> 
+        <footer align="center">
+            <a class="ink" href="#">Terms of use </a>
+            <a class="ink" href="#">privacy notice</a>
+            <a class="ink" href="#">Help</a>
+            
+            <br>
+
+<div class="Copy">
+           <br>
+           Copyright © 1996-2023 Amazon.com or its affiliates
+            </div>
+            
+
+            </footer>
+            
+			<script src="./pro.js"></script>
+            <script src="../general/js/jquery-3.3.1.min.js"></script>
+            <script src="../general/js/popper.min.js"></script>
+            <script src="../general/js/bootstrap.min.js"></script>
+</body>
+</html>
